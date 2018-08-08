@@ -1,0 +1,2 @@
+# cafe-bitcoin
+only html
