@@ -1,0 +1,12 @@
+node_modules/
+dist/
+public/
+*.log
+nbproject/private/*    
+.vscode/
+*.bak
+*.orig
+*~
+*.log
+*private.xml
+package-lock.json
