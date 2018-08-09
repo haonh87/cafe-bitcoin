@@ -1,0 +1,21 @@
+.header {
+    position: relative;
+    .header__inner {
+        display: flex;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+    }
+
+    .header__logo {
+        a {
+            height: 100px;
+            display: block;
+            position: relative;
+            img {
+                display: block;
+                max-height: 100%;
+            }
+        }
+    }
+}
