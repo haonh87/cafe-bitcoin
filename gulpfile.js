@@ -27,6 +27,7 @@ const CONFIGS = {
 var IMPORT_CONFIGS = {
 	"bootstrapDir": "node_modules/bootstrap/dist",
 	"fontAwesomeDir": "node_modules/font-awesome-scss",
+	"fontRobotoDir": "node_modules/font-roboto",
 	"jqueryDir": "node_modules/jquery/dist"
 };
 
@@ -53,14 +54,20 @@ gulp.task('clean-image', function () {
 	return del([CONFIGS.destImage]);
 });
 
+// clean font
+gulp.task('clean-fonts', function () {
+	return del([CONFIGS.destFont]);
+});
+
 // build sass
 gulp.task('sass', function () {
 	return gulp.src([
 		IMPORT_CONFIGS.bootstrapDir + "/css/bootstrap.css",
+		IMPORT_CONFIGS.fontAwesomeDir + "/scss/font-awesome.scss",
 		CONFIGS.srcScss + '/**/*.scss'])
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			outputStyle: 'compressed',
+			outputStyle: 'compressed'
 		}).on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions', 'ie 9'],
@@ -102,8 +109,12 @@ gulp.task('copy-bootstrap-jquery', function () {
 		.pipe(gulp.dest(CONFIGS.destJs));
 });
 
-gulp.task('copy-fonts', function () {
-	return gulp.src([IMPORT_CONFIGS.fontAwesomeDir + "/fonts/*.{eot,svg,ttf,woff,woff2}"])
+gulp.task('copy-fonts', ['clean-fonts'], function () {
+	return gulp.src([
+		IMPORT_CONFIGS.fontAwesomeDir + "/fonts/*.{eot,svg,ttf,woff,woff2}",
+		IMPORT_CONFIGS.fontRobotoDir + "/dist/fonts/*.{eot,svg,ttf,woff,woff2}"
+	])
+		.pipe(gulp.dest(CONFIGS.srcFont))
         .pipe(gulp.dest(CONFIGS.destFont));
 });
 
@@ -113,7 +124,7 @@ gulp.task('html', function () {
 });
 
 
-gulp.task('default', ['connect', 'sass', 'js', 'copy-fonts', 'copy-jquery', 'copy-bootstrap-jquery', 'copy-img'], function () {
+gulp.task('default', ['connect', 'sass', 'js', 'copy-fonts', 'copy-jquery', 'copy-img'], function () {
 	let watchScssSrc = CONFIGS.srcScss + "/**/*.scss";
 	let watchJsSrc = CONFIGS.srcJs + "/**/*.js";
 

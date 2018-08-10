@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "font-roboto": "0.0.2"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",

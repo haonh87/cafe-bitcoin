@@ -1,6 +1,7 @@
 node_modules/
 dist/
 public/
+assets/fonts/
 *.log
 nbproject/private/*    
 .vscode/

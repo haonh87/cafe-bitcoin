@@ -1,20 +1,90 @@
 .header {
+    border-bottom: solid 2px $main-menu-color;
     position: relative;
+    height: $heightOfHeader;
     .header__inner {
-        display: flex;
+        display: table;
         width: 100%;
+    }
+
+    .header__logo, .header__main {
+        display: table-cell;
         align-content: center;
         align-items: center;
     }
 
     .header__logo {
+        width: 20%;
         a {
-            height: 100px;
+            height: $heightOfHeader;
             display: block;
             position: relative;
             img {
                 display: block;
                 max-height: 100%;
+            }
+        }
+    }
+
+    .header__main {
+        width: 80%;
+        height: 100%;
+        text-align: right;
+    }
+
+    .main-menu {
+        height: $heightOfHeader;
+        position: relative;
+        > li {
+            display: inline-block;
+            height: 100%;
+            > a {
+                text-transform: uppercase;
+                font-weight: 500;
+                color: $main-menu-color;
+                height: 100%;
+                line-height: $heightOfHeader;
+                padding: 0 15px;
+
+                &:hover, &:focus, &:active {
+                    background: transparent;
+                    color: $white;
+                   border-bottom: solid 2px $white; 
+                }
+            }
+
+            &.active {
+                > a {
+                   color: $white;
+                   border-bottom: solid 2px $white; 
+                }
+            }
+
+            .open {
+                > a {
+                    background-color: transparent;
+                }
+            }
+    
+            .dropdown-menu {
+                background: $bg-sub-menu;
+                border-radius: 0;
+                margin: 0;
+                > li {
+                    > a {
+                        color: $main-menu-color;
+                        &:hover, &:focus, &:active {
+                            background: transparent;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .dropdown-menu {
+                    display: block;
+                }
             }
         }
     }
