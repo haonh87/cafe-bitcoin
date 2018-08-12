@@ -218,3 +218,40 @@
         clear: both;
     }
 }
+
+@media only screen and (min-width: $small-screen) {
+}
+
+@media only screen and (max-width: $mobile-screen) {
+    .header {
+        z-index: 9999;
+        .main-menu {
+            display: none;
+        }
+
+        .header__main {
+            position: relative;
+            .navbar-toggle {
+                position: absolute;
+                margin-right: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 0;
+                right: 0;
+                top: 27%;
+                font-size: 25px;
+                .fa-bars {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .main-article {
+        header {
+            a {
+                font-size: 18px;
+            }
+        }   
+    }
+}
