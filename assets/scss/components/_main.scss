@@ -67,23 +67,38 @@ html, body {
     > li {
         display: inline-block;
         > a {
-            width: 45px;
-            height: 45px;
-            line-height: 1.6;
-            font-size: 16px;
+            width: 35px;
+            text-align: center;
+            height: 35px;
+            font-size: 14px;
             border-radius: 50%;
             color: $white;
             opacity: 1;
             margin-right: 5px;
+            position: relative;
+
+            > i {
+                position: absolute;
+                left: 0;
+            }
 
             &.fb {
                 background-color: $bg-fb;
+                i {
+                    left: 14px;
+                }
             }
             &.twitter {
                 background-color: $bg-twitter;
+                i {
+                    left: 12px;
+                }
             }
             &.youtube {
                 background-color: $bg-youtube;
+                i {
+                    left: 10px;
+                }
             }
             &.telegram {
                 background-color: $bg-telegram;
@@ -112,9 +127,14 @@ html, body {
     > li {
         display: inline-block;
         float: left;
-        width: 33.3333333%;
+        width: 33%;
         position: relative;
-        padding: 10px;
+        padding: 10px 5px;
+        min-height: 490px;
+
+        &:first-child {
+            padding-left: 0;
+        }
     }
 }
 
@@ -321,5 +341,88 @@ article {
                 }
             }
         }
+    }
+}
+
+.cfb-video {
+    .cfb-video__header {
+        border: solid 1px $color-video-border;
+        padding: 10px 20px;
+    }
+    .cfb-play {
+        width: 40px;
+        height: 40px;
+        background: $bg-messenger;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        border-radius: 50%;
+        opacity: 1;
+        i {
+            color: $white;
+        }
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+.cfb-video__list {
+    margin-top: 20px;
+    > li {
+        display: inline-block;
+        width: 25%;
+        padding-left: 20px;
+        float: left;
+
+        &:first-child {
+            margin-left: -20px;
+        }
+
+        &:nth-child(n+2) {
+            margin-left: 6px;
+        }
+    }
+
+    .post-item {
+        .post-item__img {
+            position: relative;
+
+            .cfb-play {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+            }
+        }
+        .title {
+            color: $black;
+            font-weight: 600;
+        }
+    }
+}
+
+.cfb-heading {
+    font-size: 18px;
+    text-align: center;
+}
+
+h2 {
+    &.cfb-heading {
+        font-size: 24px;
+    }
+}
+
+h1 {
+    &.cfb-heading {
+        font-size: 30px;
+    }
+}
+
+h1, h2, h3, h4 {
+    &.cfb-heading {
+        margin: 0;
+        height: 50px;
+        line-height: 50px;
     }
 }
