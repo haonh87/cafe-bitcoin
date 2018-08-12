@@ -28,7 +28,8 @@ var IMPORT_CONFIGS = {
 	"bootstrapDir": "node_modules/bootstrap/dist",
 	"fontAwesomeDir": "node_modules/font-awesome",
 	"fontRobotoDir": "node_modules/roboto-fontface",
-	"jqueryDir": "node_modules/jquery/dist"
+	"jqueryDir": "node_modules/jquery/dist",
+	"slideshowDir": "node_modules/jquery-slideshow"
 };
 
 // create server
@@ -101,7 +102,8 @@ gulp.task('copy-image', ['clean-image'], function () {
 gulp.task('copy-jquery', function () {
 	return gulp.src([
 		IMPORT_CONFIGS.jqueryDir + "/jquery.min.js",
-		IMPORT_CONFIGS.bootstrapDir + "/js/bootstrap.min.js"
+		IMPORT_CONFIGS.bootstrapDir + "/js/bootstrap.min.js",
+		IMPORT_CONFIGS.slideshowDir + "/slider.min.js"
 	])
 		.pipe(gulp.dest(CONFIGS.destJs));
 });

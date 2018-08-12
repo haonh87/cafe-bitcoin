@@ -256,6 +256,34 @@ html, body {
     }
 }
 
+.cfb-posts-style-4 {
+    > li {
+        border-style: solid;
+        border-color: $color-video-border;
+        border-width: 1px 1px 0 1px;
+        padding: 10px 20px;
+
+        &:last-child {
+            border-width: 1px;
+        }
+
+        .post-item {
+            header {
+                margin-bottom: 10px;
+            }
+            .post-item__time {
+                color: $color-time;
+            }
+
+            .title {
+                color: $black;
+                font-weight: 600;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
 article {
     &.post-item {
         position: relative;
@@ -424,5 +452,131 @@ h1, h2, h3, h4 {
         margin: 0;
         height: 50px;
         line-height: 50px;
+    }
+}
+
+.cfb-newest {
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    .cfb-newest__left {
+        width: 65%;
+        padding-right: 20px;
+        position: relative;
+
+        .cfb-heading {
+            text-align: left;
+            position: relative;
+        }
+
+        .post-item {
+            .title {
+                color: $black;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 1.5;
+            }
+
+            .post-item__desc {
+                color: $color-newest-desc;
+            }
+        }
+    }
+    .cfb-newest__right {
+        width: 35%;
+    }
+}
+
+.cfb-slider {
+    .slider-buttons {
+        background: transparent;
+        top: 33%;
+        span {
+            
+        }
+
+        &.next, &.prev {
+            span {
+                opacity: .7;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .pagination-container {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.cfb-subcribe {
+    position: relative;
+    padding: 20px 30px;
+
+    .cfb-subcribe__heading {
+        text-decoration: underline;
+        color: $black;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .cfb-subcribe__desc {
+        text-align: center;
+        font-style: italic;
+        color: $color-subcribe-desc;
+        font-size: 14px;
+    }
+
+    .cfb-subcribe__form {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        form {
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            text-align: center;
+            border-bottom: solid 2px $border-subcribe;
+        }
+    }
+}
+
+
+.cfb-banner-portrait {
+    position: relative;
+    border: solid 1px $color-time;
+    min-height: 200px;
+    margin-top: 30px;
+
+
+    &::before {
+        content: 'Banner';
+        text-align: center;
+        color: $color-footer;
+        line-height: 200px;
+        margin-left: auto;
+    }
+}
+
+.cfb-banner-landcape {
+    position: relative;
+    border: solid 1px $color-time;
+    min-height: 80px;
+    margin-top: 30px;
+
+
+    &::before {
+        content: 'Banner';
+        text-align: center;
+        color: $color-footer;
+        line-height: 80px;
+        margin-left: auto;
     }
 }
