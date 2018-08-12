@@ -5,5 +5,321 @@ html, body {
 .bg-top {
     background-image: url('../img/bg_top.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+}
+
+.section {
+    padding: 20px 0;
+}
+
+.btn-readmore {
+    color: $white;
+    border: solid 1px $white;
+    padding: 10px 25px;
+    opacity: 1;
+    text-decoration: none;
+
+    &:hover, &:focus {
+        color: $white;
+        opacity: .7;
+        text-decoration: none;
+    }
+}
+
+.btn-readmore-1 {
+    color: $black;
+    border: solid 1px $black;
+    padding: 10px 20px;
+    opacity: 1;
+
+    &:hover, &:focus {
+        opacity: .7;
+        text-decoration: none;
+    }
+}
+
+.cfb-partner {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    .cfb-partner__item {
+        position: relative;
+        margin: 10px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.cfb-text-italic {
+    font-style: italic;
+}
+
+.socials {
+    > li {
+        display: inline-block;
+        > a {
+            width: 45px;
+            height: 45px;
+            line-height: 1.6;
+            font-size: 16px;
+            border-radius: 50%;
+            color: $white;
+            opacity: 1;
+            margin-right: 5px;
+
+            &.fb {
+                background-color: $bg-fb;
+            }
+            &.twitter {
+                background-color: $bg-twitter;
+            }
+            &.youtube {
+                background-color: $bg-youtube;
+            }
+            &.telegram {
+                background-color: $bg-telegram;
+            }
+            &.messenger {
+                background-color: $bg-messenger;
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+.bg-partner {
+    background-color: $bg-partner;
+}
+.bg-default {
+    background-color: $white;
+}
+
+.cfb-posts-style-1 {
+    margin-left: -15px;
+    margin-right: -15px;
+    > li {
+        display: inline-block;
+        float: left;
+        width: 33.3333333%;
+        position: relative;
+        padding: 10px;
+    }
+}
+
+.cfb-posts-style-2 {
+    > li {
+        margin-bottom: 20px;
+        &.top {
+            .post-item {
+                section {
+                    position: relative;
+                    .post-item__content {
+                        padding: 10px 15px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+
+                        a {
+                            color: $white;
+                            font-weight: 500;
+                            line-height: 1.3;
+                        }
+
+                        .cfb-info {
+                            >li {
+                                &:first-child {
+                                    > a {
+                                        color: $white;
+                                        font-weight: normal;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .post-item {
+            &.tbl {
+                section {
+                    display: flex;
+
+                    .post-item__img {
+                        width: 40%;
+                    }
+                    .post-item__content {
+                        width: 60%;
+                        padding: 0 0 0 10px;
+
+                        a.title {
+                            color: $black;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .cfb-info {
+                    padding: 7px 0;
+                    font-size: 12px;
+                    > li {
+                        > a {
+                            padding: 0 10px;
+                        }
+
+                        &:first-child {
+                            > a {
+                                padding: 0 10px 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cfb-posts-style-3 {
+    margin-left: -15px;
+    margin-right: -15px;
+    > li {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        position: relative;
+        padding: 10px;
+    }
+    section {
+        display: flex;
+
+        .post-item__img {
+            width: 35%;
+        }
+        .post-item__content {
+            width: 65%;
+            padding: 0 0 0 10px;
+
+            a.title {
+                color: $black;
+                font-weight: 600;
+            }
+
+            .cfb-info {
+                padding: 7px 0;
+                font-size: 12px;
+                > li {
+                    > a {
+                        padding: 0 10px;
+                    }
+
+                    &:first-child {
+                        > a {
+                            padding: 0 10px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+article {
+    &.post-item {
+        position: relative;
+
+        .cfb-info {
+            padding: 15px 0;
+            > li {
+                > a {
+                    color: $color-info;
+                }
+
+                &:first-child {
+                    > a {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .post-item__title {
+            color: $black;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .post-item__desc {
+            padding: 20px 0;
+        }
+    }
+}
+
+.cfb-info {
+    > li {
+        display: inline-block;
+        > a {
+            padding: 0 15px;
+            &:hover, &:focus {
+                background: transparent;
+            }
+        }
+
+        &:first-child {
+            > a {
+                padding: 0 15px 0 0;
+            }
+        }
+
+        &:not(:first-child) {
+            border-left: solid 1px $main-menu-color;
+        }
+    }
+}
+
+.cfb-news__top {
+    position: relative;
+
+    .post-item {
+        section {
+            position: relative;
+        }
+        .post-item__content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+
+            .title {
+                color: $white;
+                font-size: 22px;
+                line-height: 1.3;
+
+            }
+
+            .cfb-info {
+                > li {
+                    &:first-child {
+                        > a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

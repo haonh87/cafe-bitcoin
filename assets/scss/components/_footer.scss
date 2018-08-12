@@ -1,3 +1,52 @@
 .footer {
     position: relative;
+    background-color: $bg-footer;
+
+    .footer__top {
+        position: relative;
+        padding: 50px 0 20px 0;
+        color: $color-footer;
+        a {
+            color: $color-footer;
+            &:hover {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+
+        .cfb-text-italic {
+            font-size: 16px;
+        }
+    }
+
+    .footer__bottom {
+        .socials {
+            margin-bottom: 50px;
+        }
+        .copy {
+            padding-top: 50px;
+            color: $color-footer;
+        }
+    }
+
+    .cfb_subscribe {
+        font-size: 3rem;
+        color: $white !important;
+        text-decoration: underline;
+    }
+
+    .frm_subcribe {
+        padding-top: 50px;
+        text-align: center;
+        
+        input {
+            text-align: center;
+            width: 50%;
+            padding: 10px 20px;
+            background: transparent;
+            border: 0;
+            border-bottom: solid 1px $color-footer;
+            outline: none;
+        }
+    }
 }

@@ -11,11 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "font-roboto": "0.0.2"
+    "font-roboto": "0.0.2",
+    "roboto-fontface": "^0.10.0"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "del": "^3.0.0",
+    "font-awesome": "^4.7.0",
     "font-awesome-scss": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
@@ -27,6 +29,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-wait": "0.0.2",
     "gulp-watch": "^5.0.1",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "jquery-slideshow": "^1.0.5"
   }
 }

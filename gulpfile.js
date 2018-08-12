@@ -26,8 +26,8 @@ const CONFIGS = {
 
 var IMPORT_CONFIGS = {
 	"bootstrapDir": "node_modules/bootstrap/dist",
-	"fontAwesomeDir": "node_modules/font-awesome-scss",
-	"fontRobotoDir": "node_modules/font-roboto",
+	"fontAwesomeDir": "node_modules/font-awesome",
+	"fontRobotoDir": "node_modules/roboto-fontface",
 	"jqueryDir": "node_modules/jquery/dist"
 };
 
@@ -63,7 +63,6 @@ gulp.task('clean-fonts', function () {
 gulp.task('sass', function () {
 	return gulp.src([
 		IMPORT_CONFIGS.bootstrapDir + "/css/bootstrap.css",
-		IMPORT_CONFIGS.fontAwesomeDir + "/scss/font-awesome.scss",
 		CONFIGS.srcScss + '/**/*.scss'])
 		.pipe(sourcemaps.init())
 		.pipe(sass({
@@ -89,9 +88,14 @@ gulp.task('js', ['clean-js'], function () {
 		.pipe(connect.reload());
 });
 
-gulp.task('copy-img', function () {
+gulp.task('copy-img', ['clean-img'], function () {
 	return gulp.src([CONFIGS.srcImg + "/*.*"])
 		.pipe(gulp.dest(CONFIGS.destImg));
+});
+
+gulp.task('copy-image', ['clean-image'], function () {
+	return gulp.src([CONFIGS.srcImage + "/**/*.*"])
+		.pipe(gulp.dest(CONFIGS.destImage));
 });
 
 gulp.task('copy-jquery', function () {
@@ -112,7 +116,7 @@ gulp.task('copy-bootstrap-jquery', function () {
 gulp.task('copy-fonts', ['clean-fonts'], function () {
 	return gulp.src([
 		IMPORT_CONFIGS.fontAwesomeDir + "/fonts/*.{eot,svg,ttf,woff,woff2}",
-		IMPORT_CONFIGS.fontRobotoDir + "/dist/fonts/*.{eot,svg,ttf,woff,woff2}"
+		IMPORT_CONFIGS.fontRobotoDir + "/fonts/roboto/*.{eot,svg,ttf,woff,woff2}"
 	])
 		.pipe(gulp.dest(CONFIGS.srcFont))
         .pipe(gulp.dest(CONFIGS.destFont));
@@ -124,7 +128,7 @@ gulp.task('html', function () {
 });
 
 
-gulp.task('default', ['connect', 'sass', 'js', 'copy-fonts', 'copy-jquery', 'copy-img'], function () {
+gulp.task('default', ['connect', 'sass', 'js', 'copy-fonts', 'copy-jquery', 'copy-img', 'copy-image'], function () {
 	let watchScssSrc = CONFIGS.srcScss + "/**/*.scss";
 	let watchJsSrc = CONFIGS.srcJs + "/**/*.js";
 
