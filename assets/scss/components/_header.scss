@@ -88,6 +88,12 @@
             }
         }
     }
+
+    @-moz-document url-prefix() {
+        .main-menu {
+            float: right;
+        }
+      }
 }
 
 .main-slide {
