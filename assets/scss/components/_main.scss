@@ -179,15 +179,16 @@ html, body {
                     display: flex;
 
                     .post-item__img {
-                        width: 40%;
+                        width: 30%;
                     }
                     .post-item__content {
-                        width: 60%;
+                        width: 70%;
                         padding: 0 0 0 10px;
 
                         a.title {
                             color: $black;
-                            font-weight: 600;
+                            font-weight: 500;
+                            font-size: 12px;
                         }
                     }
                 }
@@ -554,15 +555,16 @@ h1, h2, h3, h4 {
     border: solid 1px $color-time;
     min-height: 200px;
     margin-top: 30px;
-
-
-    &::before {
-        content: 'Banner';
-        text-align: center;
-        color: $color-footer;
-        line-height: 200px;
-        margin-left: auto;
+    img {
+        z-index: 10;
     }
+
+    .cfb-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 12%;
+    }
+
 }
 
 .cfb-banner-landcape {
@@ -601,7 +603,7 @@ h1, h2, h3, h4 {
     .only-mobile {
         display: block;
     }
-    
+
     .cfb-newest {
         display: block;
 
@@ -655,5 +657,21 @@ h1, h2, h3, h4 {
 
     .cfb-heading {
         text-align: left;
+    }
+}
+
+.cfb-btn {
+    background: $bg-messenger;
+    text-align: center;
+    color: $white;
+    opacity: 1;
+    padding: 15px 30px;
+    text-transform: uppercase !important;
+    margin: auto;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+        opacity: .85;
     }
 }
