@@ -117,3 +117,42 @@
         }
     }
 }
+
+@media only screen and (max-width: $mobile-screen) {
+    .footer {
+        .footer__bottom {
+            min-height: 450px;
+        }
+
+        .cfb_subscribe-table {
+            display: block;
+            .cfb_subscribe-table__column {
+                display: block;
+
+                &:first-child {
+                    &::after {
+                        border: none;
+                    }
+                }
+
+                &:last-child {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .cfb_subscribe {
+            font-size: 22px;
+        }
+
+        .frm_subcribe {
+            input {
+                width: 90%;;
+                text-align: left;
+                padding: 10px 0;
+            }
+        }
+    }
+}

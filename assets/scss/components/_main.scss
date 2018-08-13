@@ -587,6 +587,73 @@ h1, h2, h3, h4 {
     }
 }
 
+@media only screen and (min-width: $small-screen) {
+    .only-mobile {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: $mobile-screen) {
+    .only-pc {
+        display: none;
+    }
+
+    .only-mobile {
+        display: block;
+    }
     
+    .cfb-newest {
+        display: block;
+
+        .cfb-newest__left, .cfb-newest__right {
+            width: 100%;
+        }
+
+        .cfb-newest__left {
+            padding-right: 0;
+        }
+    }
+
+    .cfb-video__list {
+        > li {
+            display: block;
+            width: 100%;
+            float: none;
+            padding-left: 0;
+            margin-bottom: 30px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .cfb-news__list {
+        padding: 15px;
+        .cfb-posts-style-3 {
+            > li {
+                display: block;
+                float: none;
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+
+    .cfb-news_con {
+        .cfb-posts-style-1 {
+            padding: 15px;
+            > li {
+                float: none;
+                display: block;
+                width: 100%;
+                min-height: auto;
+                padding: 0;
+            }
+        }
+    }
+
+    .cfb-heading {
+        text-align: left;
+    }
 }
