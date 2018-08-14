@@ -2,11 +2,6 @@ html, body {
     font-family: $font-site;
     font-size: $font-size-default;
 }
-.bg-top {
-    background-image: url('../img/bg_top.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-}
 
 .section {
     padding: 20px 0;
@@ -589,6 +584,39 @@ h1, h2, h3, h4 {
     }
 }
 
+.cfb-module {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .cfb-module__inner {
+        display: flex;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+    }
+
+
+    .cfb-module__heading {
+        width: 20%;
+        .cfb-heading {
+            font-size: 48px;
+            color: $white;
+        }
+    }
+
+    .cfb-module__content {
+        width: 80%;
+        .cfb-module__content-desc {
+            width: 60%;
+            float: right;
+            padding: 25px;
+            color: $main-menu-color;
+            background-color: rgba(0,0,0,.8);
+        }
+    }
+}
+
 @media only screen and (min-width: $small-screen) {
     .only-mobile {
         display: none;
@@ -657,6 +685,20 @@ h1, h2, h3, h4 {
 
     .cfb-heading {
         text-align: left;
+    }
+
+    .cfb-partner {
+        display: block;
+        .cfb-partner__item {
+            display: inline-block;
+            width: 50%;
+            margin: 0;
+            float: left;
+
+            &:nth-child(n+3) {
+                display: none;
+            }
+        }
     }
 }
 
