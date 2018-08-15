@@ -7,10 +7,20 @@ function openNav(body, closeMobileNav) {
     backDrops.one('click', closeMobileNav);
 }
 
+function openMainSearch(body, closeMobileNav) {
+    body.addClass('open-mainsearch');
+    if (body.find('.nav-overlay').length <= 0) {
+        body.append('<div class="overlay-mobile"></div>');
+    }
+    var backDrops = body.find('.overlay-mobile');
+    backDrops.one('click', closeMobileNav);
+}
+
 $(document).ready(function() {
     var mobileOpenMenuButton = $('.btn-mobile-menu.cfb-open-menu'),
         mobileCloseMenuButton = $('.btn-mobile-menu.cfb-close-menu'),
         mainSearchButton = $('.btn-open-main-search'),
+        closeMainSearchButton = $('.cfb-close-search'),
         mainSearch = $("#main_search"),
         body = $('body');
 
@@ -29,7 +39,7 @@ $(document).ready(function() {
     var closeMainSearch = function(e) {
         e.preventDefault();
         var backDrops = body.find('.overlay-mobile');
-        body.removeClass('open-nav');
+        body.removeClass('open-mainsearch');
         backDrops.remove('.overlay-mobile');
     };
 
@@ -51,8 +61,13 @@ $(document).ready(function() {
     });
 
     mainSearchButton.on('click', function(e) {
-        console.log('vao day');
-        openNav(body, closeMainSearch);
+        openMainSearch(body, mainSearch);
+        return false;
+    });
+
+    closeMainSearchButton.on('click', function(e) {
+        e.preventDefault();
+        closeMainSearch(e);
         return false;
     });
 });
