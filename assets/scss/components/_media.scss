@@ -10,6 +10,20 @@
     background-size: contain;
 }
 
+.cfb-btn-send {
+    background-color: $bg-messenger;
+    color: $white;
+    text-transform: uppercase !important;
+    text-align: center;
+    padding: 10px 25px;
+    border: none;
+    opacity: 1;
+
+    &:hover, &:focus {
+        opacity: .8;
+    }
+}
+
 .cfg-list-1 {
     .post-item {
         margin-bottom: 30px;
