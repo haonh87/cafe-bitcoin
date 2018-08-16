@@ -699,7 +699,7 @@ h1, h2, h3, h4 {
     position: relative;
 
     .cfb-heading {
-        text-align: left;
+        text-align: center;
     }
 
     .cfb-about__content {
@@ -721,6 +721,41 @@ h1, h2, h3, h4 {
     .cfb-about-year__infor {
         font-size: 16px;
         font-weight: 500;
+    }
+}
+
+.cfb-advertise {
+    position: relative;
+    margin-bottom: 30px;
+
+    .cfb-advertise__image {
+        position: relative;
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+    .cfb-advertise__content {
+        color: $color-newest-desc;
+        text-align: justify;
+    }
+}
+
+.cfb-advertise-notice {
+    background-color: $bg-partner;
+    padding: 20px 25px;
+
+    .cfb-advertise-notice__count {
+        font-weight: 600;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .cfb-advertise-notice__text {
+        font-size: 11px;
+        color: $color-newest-desc;
+        text-align: center;
     }
 }
 

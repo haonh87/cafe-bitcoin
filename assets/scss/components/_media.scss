@@ -66,3 +66,9 @@
         border-radius: 1px !important;
     }
 }
+
+@media only screen and (max-width: $mobile-screen) {
+    .bg-top {
+        background-image: url('../img/bg_top_mobile.jpg')
+    }
+}
