@@ -590,10 +590,16 @@ h1, h2, h3, h4 {
     padding-bottom: 30px;
 
     .cfb-module__inner {
-        display: flex;
+        display: table;
         width: 100%;
+        height: 100%;
         align-content: center;
         align-items: center;
+    }
+
+    .cfb-module__heading, .cfb-module__content {
+        display: table-cell;
+        vertical-align: middle;
     }
 
 
@@ -602,6 +608,9 @@ h1, h2, h3, h4 {
         .cfb-heading {
             font-size: 48px;
             color: $white;
+            height: auto;
+            line-height: 1.5;
+            text-align: left;
         }
     }
 
@@ -629,6 +638,10 @@ h1, h2, h3, h4 {
             margin-bottom: 20px;
         }
     }
+
+    .post-item__content {
+        text-align: justify;
+    }
 }
 
 .cfb-other-post {
@@ -637,9 +650,89 @@ h1, h2, h3, h4 {
     }
 }
 
+.cfb-contact {
+    position: relative;
+    .cfb-contact__desc {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+}
+
+.cfb-staffs {
+    position: relative;
+
+    .cfb-staffs__list {
+        > li {
+            display: inline-block;
+            float: left;
+            width: 25%;
+            margin-bottom: 20px;
+
+            .cfb-staffs__inner {
+                position: relative;
+                padding-right: 30px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .cfb-staffs__info {
+                margin-top: 20px;
+                strong, span {
+                    text-align: center;
+                    display: block;
+                    width: 100%;
+                }
+
+                strong {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.cfb-about {
+    position: relative;
+
+    .cfb-heading {
+        text-align: left;
+    }
+
+    .cfb-about__content {
+        display: block;
+        width: 80%;
+    }
+}
+
+.cfb-about-year {
+    border: solid 5px $bg-messenger;
+    padding: 25px;
+
+    .cfb-about-year__number {
+        font-size: 45px;
+        font-weight: 600;
+        padding-bottom: 50px;
+    }
+
+    .cfb-about-year__infor {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
 @media only screen and (min-width: $small-screen) {
     .only-mobile {
         display: none;
+    }
+
+    .cfb-module {
+        .cfb-module__inner {
+            min-height: 140px;
+        }
     }
 }
 
