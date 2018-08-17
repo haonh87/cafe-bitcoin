@@ -759,6 +759,46 @@ h1, h2, h3, h4 {
     }
 }
 
+.cfb-advertise__rank {
+    .cfb-heading {
+        text-align: left;
+    }
+}
+
+.cfb-advertise__form {
+    padding-left: 30px;
+    padding-right: 30px;
+    .cfb-heading {
+        text-align: left;
+    }
+}
+
+.cfb-progressbar {
+    .progress {
+        border-radius: 0;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        height: 30px;
+        position: relative;
+
+        .progress-bar {
+            line-height: 30px;
+            text-align: left;
+            span {
+                &:first-child {
+                    padding-left: 10px;
+                }
+                &.percent {
+                    position: absolute;
+                    right: 10px;
+                    color: $main-menu-color;
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: $small-screen) {
     .only-mobile {
         display: none;
@@ -847,6 +887,19 @@ h1, h2, h3, h4 {
                 display: none;
             }
         }
+    }
+
+    .cfb-advertise__form {
+        padding-left: 0;
+        padding-right: 0;
+        .cfb-heading {
+            text-align: left;
+            font-size: 20px;
+        }
+    }
+
+    .cfb-advertise-notice {
+        margin-bottom: 20px;
     }
 }
 
