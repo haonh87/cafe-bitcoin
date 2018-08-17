@@ -709,8 +709,30 @@ h1, h2, h3, h4 {
 }
 
 .cfb-about-year {
-    border: solid 5px $bg-messenger;
-    padding: 25px;
+    position: relative;
+    min-height: 250px;
+    
+
+    .cfb-about-year__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 15%;
+        width: 85%;
+        background-color: $bg-partner;
+        z-index: 1;
+    }
+
+    .cfb-about-year__inner {
+        border: solid 5px $bg-messenger;
+        position: absolute;
+        right: 0;
+        top: 15%;
+        bottom: 0;
+        width: 85%;
+        z-index: 999;
+        padding: 20px;
+    }
 
     .cfb-about-year__number {
         font-size: 45px;
@@ -719,7 +741,6 @@ h1, h2, h3, h4 {
     }
 
     .cfb-about-year__infor {
-        font-size: 16px;
         font-weight: 500;
     }
 }
@@ -780,10 +801,16 @@ h1, h2, h3, h4 {
         -webkit-box-shadow: none;
         height: 30px;
         position: relative;
+        background-color: $bg-partner;
 
         .progress-bar {
             line-height: 30px;
             text-align: left;
+            background-color: $bg-progressbar;
+            color: $color-progressbar;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+
             span {
                 &:first-child {
                     padding-left: 10px;
@@ -801,7 +828,7 @@ h1, h2, h3, h4 {
 
 @media only screen and (min-width: $small-screen) {
     .only-mobile {
-        display: none;
+        display: none !important;
     }
 
     .cfb-module {
@@ -813,11 +840,11 @@ h1, h2, h3, h4 {
 
 @media only screen and (max-width: $mobile-screen) {
     .only-pc {
-        display: none;
+        display: none !important;
     }
 
     .only-mobile {
-        display: block;
+        display: block !important;
     }
 
     .cfb-newest {
@@ -900,6 +927,35 @@ h1, h2, h3, h4 {
 
     .cfb-advertise-notice {
         margin-bottom: 20px;
+    }
+
+    .cfb-module {
+        .cfb-module__heading {
+            .cfb-heading {
+                font-size: 40px;
+                text-align: left;
+            }
+        }
+    }
+
+    .cfb-about {
+        .cfb-heading {
+            text-align: left;
+        }
+    }
+
+    .cfb-staffs {
+        .cfb-staffs__list {
+            > li {
+                display: block;
+                width: 100%;
+                .cfb-staffs__inner {
+                    padding-right: 0;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
     }
 }
 

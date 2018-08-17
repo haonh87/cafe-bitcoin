@@ -75,6 +75,10 @@
     margin-bottom: 30px !important;
 }
 
+.pb-50 {
+    padding-bottom: 50px !important;
+}
+
 @media only screen and (min-width: $standard-screen) {
     .cfb-form {
         &.control-large {
@@ -88,5 +92,8 @@
 @media only screen and (max-width: $mobile-screen) {
     .bg-top {
         background-image: url('../img/bg_top_mobile.jpg')
+    }
+    .bg-category {
+        background-image: url('../img/bg_categories_mobile.png');
     }
 }
