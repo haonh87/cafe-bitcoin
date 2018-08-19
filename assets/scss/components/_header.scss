@@ -456,4 +456,19 @@ body.open-mainsearch {
             }
         }   
     }
+
+    .main-slide {
+        padding-top: 40%;
+
+        .carousel-control {
+            &.right {
+                text-align: left;
+            }
+        }
+
+        .main-article {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
 }
