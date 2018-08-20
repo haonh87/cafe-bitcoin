@@ -107,6 +107,43 @@ html, body {
             }
         }
     }
+
+    &.dynamic {
+        position: absolute;
+        top: 200px;
+        left: 20px;
+        > li {
+            display: block;
+
+            > a {
+                margin-right: 0;
+                margin-bottom: 10px;
+
+                &.fb, &.twitter, &.youtube {
+                    background-color: transparent;
+                    color: rgba(187, 187, 187, 1);
+                    border: solid 1px rgba(187, 187, 187, 1);
+
+                    &:hover {
+                        background-color: rgba(187, 187, 187, 1);
+                        color: $white;
+                    }
+                }
+
+                &.fb {
+                    i {
+                        left: 13px;
+                    }
+                }
+
+                &.twitter {
+                    i {
+                        left: 11px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .bg-partner {
@@ -955,6 +992,12 @@ h1, h2, h3, h4 {
                     padding-right: 10px;
                 }
             }
+        }
+    }
+
+    .socials {
+        &.dynamic {
+            display: none;
         }
     }
 }

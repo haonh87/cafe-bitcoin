@@ -2,6 +2,32 @@
     border-bottom: solid 2px $main-menu-color;
     position: relative;
     height: $heightOfHeader;
+
+    &.is-fixed {
+		left: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+        z-index: 20;
+        background-color: rgba(0,0,0,.85);
+        height: $heightOfHeaderFixed;
+
+        .header__logo {
+            a {
+                height: $heightOfHeaderFixed;
+            }
+        }
+
+        .main-menu {
+            height: $heightOfHeaderFixed;
+            > li {
+                > a {
+                    line-height: $heightOfHeaderFixed;
+                }
+            }
+        }
+    }
+
     .header__inner {
         display: table;
         width: 100%;
