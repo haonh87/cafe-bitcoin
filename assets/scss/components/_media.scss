@@ -79,6 +79,34 @@
     padding-bottom: 50px !important;
 }
 
+.frm_search_mobile {
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+    .form-group {
+        margin-bottom: 0;
+        border-bottom: solid 2px $white;
+    }
+    
+    input, button {
+        text-align: left;
+        background: transparent;
+        border: 0;
+        outline: none;
+        color: $white;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px 20px 10px 10px;
+        color: $white;
+    }
+
+    button {
+        color: $white;
+    }
+}
+
 @media only screen and (min-width: $standard-screen) {
     .cfb-form {
         &.control-large {
